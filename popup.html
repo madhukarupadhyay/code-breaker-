@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header><span class="logo">RESEARCHMATE</span><span class="tag">AI study notes</span></header>
+
+  <section>
+    <label>Topic</label>
+    <input id="topic" placeholder="e.g. Photosynthesis" />
+  </section>
+
+  <section>
+    <div class="row"><label>Marked clips <span id="count" class="pill">0</span></label>
+      <button id="clear" class="link">Clear all</button></div>
+    <div id="clips" class="clips"></div>
+    <p id="hint" class="hint">Select text or right-click an image on any website, then choose <b>Add to research</b>.</p>
+  </section>
+
+  <section class="row two">
+    <div><label>Level</label>
+      <select id="level"><option>Class 10</option><option>Undergraduate</option><option>Expert</option></select></div>
+    <div><label>Language</label>
+      <select id="lang"><option>English</option><option>Hindi</option></select></div>
+  </section>
+
+  <button id="generate" class="primary">GENERATE NOTES</button>
+  <div id="status" class="status"></div>
+
+  <div id="result" class="result" hidden>
+    <div id="note"></div>
+    <div id="gallery" class="gallery"></div>
+    <div class="row"><button id="copy" class="link">Copy note</button><button id="download" class="link">Download .md</button></div>
+  </div>
+
+  <details>
+    <summary>Settings</summary>
+    <label>AI API key (optional)</label>
+    <input id="apikey" type="password" placeholder="Leave empty for demo mode" />
+    <p class="hint">Stored only in this browser. For a hackathon demo only; a real product keeps the key on a backend server.</p>
+  </details>
+
+  <script src="lib.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

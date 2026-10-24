@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "ResearchMate",
+  "version": "0.1.0",
+  "description": "Mark text and images while researching. AI turns them into one organized study note.",
+  "permissions": ["contextMenus", "storage"],
+  "host_permissions": ["https://api.anthropic.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "ResearchMate" }
+}
